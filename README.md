@@ -1,9 +1,9 @@
 # Spill_IUG
-Pingpong-spill laget for IUG
+Pingpong-spill laget for IUG. Ment for bruk som markedsføring på stand
 
 Laget av Astrid Moum, 2019
 
-Hardware medfølger og er ment som markedsføring på stand
+Hardware medfølger
 
 SPILLET:
 -
