@@ -5,7 +5,7 @@ Laget av Astrid Moum, 2019
 
 Hardware medfølger
 
-SPILLET:
+HVORDAN SPILLET FUNGERER:
 -
 - Vi har et langt gjennomsiktig plastrør med en pingpollball inni. 
 - En LED-pære langs plastrøret starter å lyse, og målet er å få ballen hit.
