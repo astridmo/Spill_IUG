@@ -29,9 +29,6 @@ OPPKOBLING:
 
 Takk for bidrag:
 - 
-Monty Hatfield,
-Martin Sanderøy,
-Morten Sæther,
-Silje Dale,
-Uzair Aftab,
-Eik Idéverksted
+Kode: Monty Hatfield, Martin Sanderøy, Morten Sæther, Silje Dale, Uzair Aftab, Eik Idéverksted
+
+Hardware: Monty Hatfield, Even Sillerud, Markus Aasebø, Brage Sæbøe
