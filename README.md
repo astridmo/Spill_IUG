@@ -7,6 +7,7 @@ Hardware medfølger og er ment som markedsføring på stand
 SPILLET:
 -
 Vi har et langt gjennomsiktig plastrør med en pingpollball inni. 
+
 En LED-pære langs plastrøret starter å lyse, og målet er å få ballen hit.
 En vifte under røret er koblet til en generator og en dynamo (?). 
 Man genererer strøm ved å sveive på et håndtak som er festet til generatoren.
