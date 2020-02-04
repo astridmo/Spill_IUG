@@ -20,15 +20,15 @@ const int SensorArr [5] = {A0, A1, A2, A3, A4};  // Array for utgangene til Sens
 int ValArr [5] = {0};
 int LEDArr [5] = {2,3,4,5,6};           // Array for LED-pærene
 
-uint8_t buttonPin = 8;                 // Setter knappen til utgang 8
+uint8_t buttonPin = 8;                 // Setter knappen til inngang 8
 uint8_t soundPin = 9;                  // Setter lydsensor til utgang 9
 
 uint8_t SensorNumber = 0;              // Variabel for hvilken sensor ballen skal til
 uint8_t points = 0;                    // Variabel for å telle poeng
-uint8_t count = 0;                      // Variabel for antall ganger du har vært ved sensor pr runde
-unsigned long int gameTime = 0;                      // Variabel for hvor lang tid spiller bruker på 1 runde                                       
-int valPoints = 0;                     
-int highscore = 0;                    // Variabel for highscore 
+uint8_t count = 0;                     // Variabel for antall ganger du har vært ved sensor pr runde
+unsigned long int gameTime = 0;        // Variabel for hvor lang tid spiller bruker på 1 runde                                       
+uint8_t int valPoints = 0;                     
+uint8_t int highscore = 0;                    // Variabel for highscore 
 boolean win;
 
 
@@ -182,11 +182,8 @@ void newRound(){
   Serial.print(SensorNumber);                              // --> Fjernes etter debuging
   Serial.println("  skal lyse");                        // --> Fjernes etter debuging
 
-  for (int i=0; i<=4; i++){
-    if (SensorNumber == i) {
-      digitalWrite(LEDArr[i],HIGH);             // Setter på valgt LED-pære
-    }
-  }
+  digitalWrite(LEDArr[SensorNumber],HIGH);             // Setter på valgt LED-pære
+
 } 
 
 
@@ -222,7 +219,7 @@ void youLoose(){
     }
   }
 
-  // While-løkke for å vente med å starte ny runde helt til spiller trykker på knappen
+  // While-løkke for å vente med å starte nytt spill helt til spiller trykker på knappen
   int buttonState = 0;
   while(buttonState==0){
     buttonState = digitalRead(buttonPin); // Serien vil være åpen (gi ut verdi 0) helt til knapp trykkes ned
