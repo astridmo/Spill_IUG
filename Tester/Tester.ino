@@ -12,5 +12,5 @@ digitalWrite(LEDArr[], LOW);
 
 // Fikse å skrive ut 0 i poeng etter du har fått highscore.
 
-// Kan gjøre om sound()-funksjonen til å ha inputi stedet for gloal variabel win.
+// Kan gjøre om sound()-funksjonen til å ha input i stedet for gloal variabel win.
 }
