@@ -15,7 +15,7 @@
 
 #define LIMIT 380                       // Grense for å si om ballen er foran sensor eller ikke
 #define TimesBySensor 25                // Antall ganger du må være ved sensoren hver runde for å få poeng. Mink tallet for lettere spill. Øk tallet for vanskeligere spill.
-#define Difficulty 7000                 // Vanskelighetsgrad på spillet. Øk tallet for lettere spill. Mink tallet for vanskeligere spill
+#define MaxGameTime 7000                 // Vanskelighetsgrad på spillet. Øk tallet for lettere spill. Mink tallet for vanskeligere spill
 
 
 const int SensorArr [5] = {A0, A1, A2, A3, A4};  // Array for utgangene til SensorNumber 1-5
@@ -111,7 +111,7 @@ gameTime = millis();
 //Serial.print("millis() - gameTime:  "); // --> Fjernes etter debugging
 //Serial.println(millis()-gameTime);     // --> Fjernes etter debugging
 
-while (millis()-gameTime < Difficulty && valPoints==points)
+while (millis()-gameTime < MaxGameTime && valPoints==points)
 {
 
 //  Serial.println("Loop før avlesing");  // --> Fjernes etter debugging
