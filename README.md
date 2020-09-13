@@ -20,13 +20,13 @@ HVORDAN FORANDRE VANSKELIGHETSGRAD:
 -
 Det er 2 ulike måter å forandre vanskelighetsgraden på spillet
 1. #define MaxGameTime 7000
-    Denne definisjonen sier hvor lang tid man har på å få ett poeng.
-    Lettere spill: Velg en høyere verdi for MaxGameTime
-    Vanskeligere spill: Velg en lavere verdi for MaxGameTime
+   - Denne definisjonen sier hvor lang tid man har på å få ett poeng.
+   - Lettere spill: Velg en høyere verdi for MaxGameTime
+   - Vanskeligere spill: Velg en lavere verdi for MaxGameTime
 2. #define TimesBySensor 25
-    Denne definisjonen sier hvor mange ganger arduino-brettet må detektere ballen foran sensoren for at man skal få poeng. 
-    Lettere spill: Velg en lavere verdi enn 25
-    Vanskeligere spill: Velg en høyere verdi enn 25
+   - Denne definisjonen sier hvor mange ganger arduino-brettet må detektere ballen foran sensoren for at man skal få poeng. 
+   - Lettere spill: Velg en lavere verdi enn 25
+   - Vanskeligere spill: Velg en høyere verdi enn 25
 
 
 OPPKOBLING:
