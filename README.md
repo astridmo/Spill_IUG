@@ -1,7 +1,7 @@
 # Spill_IUG
 Pingpong-spill laget for IUG. Ment for bruk som markedsføring på stand
 
-Laget av Astrid Moum, 2019
+Laget av Astrid Moum, 2019 | astridmo@nmbu.no
 
 Hardware medfølger
 
@@ -16,6 +16,17 @@ HVORDAN SPILLET FUNGERER:
 - Klarer man ikke å komme til LED-lampen på tiden taper man spillet
 - Spillet startes på nytt ved å trykke på startknappen
 
+HVORDAN FORANDRE VANSKELIGHETSGRAD:
+-
+Det er 2 ulike måter å forandre vanskelighetsgraden på spillet
+1. #define MaxGameTime 7000
+    Denne definisjonen sier hvor lang tid man har på å få ett poeng.
+    Lettere spill: Velg en høyere verdi for MaxGameTime
+    Vanskeligere spill: Velg en lavere verdi for MaxGameTime
+2. #define TimesBySensor 25
+    Denne definisjonen sier hvor mange ganger arduino-brettet må detektere ballen foran sensoren for at man skal få poeng. 
+    Lettere spill: Velg en lavere verdi enn 25
+    Vanskeligere spill: Velg en høyere verdi enn 25
 
 
 OPPKOBLING:
@@ -30,5 +41,3 @@ OPPKOBLING:
 Takk for bidrag:
 - 
 Kode: Martin Sanderøy, Morten Sæther, Monty Hatfield, Silje Dale
-
-Hardware: Monty Hatfield, Even Sillerud, Markus Aasebø, Brage Sæbøe
