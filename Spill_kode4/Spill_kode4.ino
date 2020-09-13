@@ -1,5 +1,7 @@
 /* PINGPONG-SPILL FOR INGENIØRER UTEN GRENSER
  * 2019
+ * 
+ * Laget av: Astrid Moum | astridmo@nmbu.no
 */
 
 // For å laste opp kode: Ctrl+Shift+P 
@@ -13,22 +15,22 @@
 
 #define LIMIT 380                       // Grense for å si om ballen er foran sensor eller ikke
 #define TimesBySensor 25                // Antall ganger du må være ved sensoren hver runde for å få poeng. Mink tallet for lettere spill. Øk tallet for vanskeligere spill.
-#define Difficulty 7000                 // Vanskelighetsgrad på spillet. Øk tallet for lettere spill. Mink tallet for vanskeligere spill
+#define MaxGameTime 7000                 // Vanskelighetsgrad på spillet. Øk tallet for lettere spill. Mink tallet for vanskeligere spill
 
 
 const int SensorArr [5] = {A0, A1, A2, A3, A4};  // Array for utgangene til SensorNumber 1-5
 int ValArr [5] = {0};
 int LEDArr [5] = {2,3,4,5,6};           // Array for LED-pærene
 
-uint8_t buttonPin = 8;                 // Setter knappen til utgang 8
+uint8_t buttonPin = 8;                 // Setter knappen til inngang 8
 uint8_t soundPin = 9;                  // Setter lydsensor til utgang 9
 
 uint8_t SensorNumber = 0;              // Variabel for hvilken sensor ballen skal til
 uint8_t points = 0;                    // Variabel for å telle poeng
-uint8_t count = 0;                      // Variabel for antall ganger du har vært ved sensor pr runde
-unsigned long int gameTime = 0;                      // Variabel for hvor lang tid spiller bruker på 1 runde                                       
-int valPoints = 0;                     
-int highscore = 0;                    // Variabel for highscore 
+uint8_t count = 0;                     // Variabel for antall ganger du har vært ved sensor pr runde
+unsigned long int gameTime = 0;        // Variabel for hvor lang tid spiller bruker på 1 runde                                       
+uint8_t int valPoints = 0;                     
+uint8_t int highscore = 0;                    // Variabel for highscore 
 boolean win;
 
 
@@ -38,8 +40,8 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 /* Oppkobling av LCD-skjerm:
  *  GND -> GND
  *  VCC -> 5V
- *  SDA -> A4
- *  SCL -> A5
+ *  SDA -> 20 - Mega (A4-Uno)
+ *  SCL -> 21 - Mega (A5-Uno)
  *  
  *  Dette er en I2C skjerm, søk evt opp dette for mer info
  */
@@ -109,7 +111,7 @@ gameTime = millis();
 //Serial.print("millis() - gameTime:  "); // --> Fjernes etter debugging
 //Serial.println(millis()-gameTime);     // --> Fjernes etter debugging
 
-while (millis()-gameTime < Difficulty && valPoints==points)
+while (millis()-gameTime < MaxGameTime && valPoints==points)
 {
 
 //  Serial.println("Loop før avlesing");  // --> Fjernes etter debugging
@@ -182,11 +184,8 @@ void newRound(){
   Serial.print(SensorNumber);                              // --> Fjernes etter debuging
   Serial.println("  skal lyse");                        // --> Fjernes etter debuging
 
-  for (int i=0; i<=4; i++){
-    if (SensorNumber == i) {
-      digitalWrite(LEDArr[i],HIGH);             // Setter på valgt LED-pære
-    }
-  }
+  digitalWrite(LEDArr[SensorNumber],HIGH);             // Setter på valgt LED-pære
+
 } 
 
 
@@ -222,7 +221,7 @@ void youLoose(){
     }
   }
 
-  // While-løkke for å vente med å starte ny runde helt til spiller trykker på knappen
+  // While-løkke for å vente med å starte nytt spill helt til spiller trykker på knappen
   int buttonState = 0;
   while(buttonState==0){
     buttonState = digitalRead(buttonPin); // Serien vil være åpen (gi ut verdi 0) helt til knapp trykkes ned

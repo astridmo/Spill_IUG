@@ -2,6 +2,8 @@
  * 2019
  * 
  * Dette er en full test-kode for 3 sensorer
+ * 
+ * Laget av: Astrid Moum | astridmo@nmbu.no
 */
 
 
@@ -14,7 +16,7 @@
 
 #define LIMIT 380                       // Grense for å si om ballen er foran sensor eller ikke
 #define TimesBySensor 25                // Antall ganger du må være ved sensoren hver runde for å få poeng. Mink tallet for lettere spill. Øk tallet for vanskeligere spill.
-#define Difficulty 7000                 // Vanskelighetsgrad på spillet. Øk tallet for lettere spill. Mink tallet for vanskeligere spill
+#define MaxGameTime 7000                 // Vanskelighetsgrad på spillet. Øk tallet for lettere spill. Mink tallet for vanskeligere spill
 
 
 const int SensorArr [3] = {A0, A1, A2}; // Array for utgangene til SensorNumber 1-5
@@ -39,8 +41,8 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 /* Oppkobling av LCD-skjerm:
  *  GND -> GND
  *  VCC -> 5V
- *  SDA -> A4
- *  SCL -> A5
+ *  SDA -> 20 - Mega (A4-Uno)
+ *  SCL -> 21 - Mega (A5-Uno)
  *  
  *  Dette er en I2C skjerm, søk evt opp dette for mer info
  */
@@ -109,7 +111,7 @@ gameTime = millis();
 //Serial.print("millis() - gameTime:  "); // --> Fjernes etter debugging
 //Serial.println(millis()-gameTime);     // --> Fjernes etter debugging
 
-while (millis()-gameTime < Difficulty && valPoints==points)
+while (millis()-gameTime < MaxGameTime && valPoints==points)
 {
 
 //  Serial.println("Loop før avlesing");  // --> Fjernes etter debugging
