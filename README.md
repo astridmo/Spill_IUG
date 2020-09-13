@@ -30,8 +30,11 @@ Det er 2 ulike måter å forandre vanskelighetsgraden på spillet
 
 UTSTYR:
 - 
-- Sensorer: GP2Y0A21YK0F Sharp IR Analog Distance Sensor Distance 10-80CM Cable For Arduino
-- LCD-skjerm: I2C
+- Sensorer: GP2Y0A21YK0F Sharp IR Analog Distance Sensor Distance 10-80CM Cable For Arduin
+- LED-lys: (fra intro Arduino sett)
+- Knapp: Momentary button (fra intro Arduino-sett)
+- Høyttaler: piezo buzzer (fra intro Arduino-sett)
+- LCD-skjerm: I2C (fra intro Arduino-sett)
 
 OPPKOBLING:
 - 
