@@ -24,11 +24,11 @@ OPPKOBLING:
 - LED-lys: 2, 3, 4, 5, 6
 - Knapp: 8
 - Høyttaler: 9
-- LCD-skjerm: GND->GND, VCC->5V, SDA->A4, SCL->A5
+- LCD-skjerm: GND->GND, VCC->5V, SDA->20, SCL->21
 
 
 Takk for bidrag:
 - 
-Kode: Martin Sanderøy, Morten Sæther, Monty Hatfield, Silje Dale, Uzair Aftab, Eik Idéverksted
+Kode: Martin Sanderøy, Morten Sæther, Monty Hatfield, Silje Dale
 
 Hardware: Monty Hatfield, Even Sillerud, Markus Aasebø, Brage Sæbøe
