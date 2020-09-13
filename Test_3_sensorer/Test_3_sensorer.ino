@@ -2,6 +2,8 @@
  * 2019
  * 
  * Dette er en full test-kode for 3 sensorer
+ * 
+ * Laget av: Astrid Moum | astridmo@nmbu.no
 */
 
 

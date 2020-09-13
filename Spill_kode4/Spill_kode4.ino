@@ -1,5 +1,7 @@
 /* PINGPONG-SPILL FOR INGENIØRER UTEN GRENSER
  * 2019
+ * 
+ * Laget av: Astrid Moum | astridmo@nmbu.no
 */
 
 // For å laste opp kode: Ctrl+Shift+P 
