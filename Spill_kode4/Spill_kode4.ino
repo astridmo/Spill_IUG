@@ -38,8 +38,8 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 /* Oppkobling av LCD-skjerm:
  *  GND -> GND
  *  VCC -> 5V
- *  SDA -> A4
- *  SCL -> A5
+ *  SDA -> 20 - Mega (A4-Uno)
+ *  SCL -> 21 - Mega (A5-Uno)
  *  
  *  Dette er en I2C skjerm, søk evt opp dette for mer info
  */
