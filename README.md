@@ -30,6 +30,7 @@ Det er 2 ulike måter å forandre vanskelighetsgraden på spillet
 
 UTSTYR:
 - 
+- Arduino Mega
 - Sensorer: GP2Y0A21YK0F Sharp IR Analog Distance Sensor Distance 10-80CM Cable For Arduin
 - LED-lys: (fra intro Arduino sett)
 - Knapp: Momentary button (fra intro Arduino-sett)
